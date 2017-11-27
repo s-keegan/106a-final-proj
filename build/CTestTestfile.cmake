@@ -6,4 +6,5 @@
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
 SUBDIRS(lab4_cam)
+SUBDIRS(planning_baxter)
 SUBDIRS(ar_track_alvar)

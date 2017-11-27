@@ -407,6 +407,12 @@ pcl_msgs_DIR:PATH=/opt/ros/indigo/share/pcl_msgs/cmake
 //The directory containing a CMake configuration file for pcl_ros.
 pcl_ros_DIR:PATH=/opt/ros/indigo/share/pcl_ros/cmake
 
+//Value Computed by CMake
+planning_baxter_BINARY_DIR:STATIC=/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/planning_baxter
+
+//Value Computed by CMake
+planning_baxter_SOURCE_DIR:STATIC=/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/planning_baxter
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
 
@@ -593,7 +599,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=4
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

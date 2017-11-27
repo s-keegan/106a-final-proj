@@ -6,9 +6,26 @@ from moveit_msgs.msg import OrientationConstraint, Constraints
 from geometry_msgs.msg import PoseStamped
 import pointTransFunctions as ptf
 import numpy as np
+from ar_track_alvar_msgs import AlvarMarkers
+
+tag_poses = []
+
+def callback(message):
+    markers = msg.markers
+    for marker in markers:
+        pose = marker.pose.pose
+        coords = np.array([pose.position.x, pose.position.y, pose.position.z])
+        orientation = np.array([pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w])
+        tag_poses.append((coords, orientation))
+
+def listener():
+    rospy.init.node('ar_pose_reader')
+    rospy.Subscriber("ar_pose_marker", AlvarMarkers, callback)
 
 
 def main(pointList):
+    listener()
+
     #Initialize moveit_commander
     moveit_commander.roscpp_initialize(sys.argv)
 
@@ -26,10 +43,24 @@ def main(pointList):
     right_arm.set_planning_time(10)
 
     #Retrieve 3D tag points from /ar_pose_marker: tl, bl, tr, br
-    tagPoints3D = np.array([[],
-        [],
-        [],
-        []])
+    
+    point1 = np.array([tag_poses[0][0][0], tag_poses[0][0][1], tag_poses[0][0][2]])
+    point2 = np.array([tag_poses[1][0][0], tag_poses[1][0][1], tag_poses[1][0][2]])
+
+    if point1[0] < point2[0]:
+        tagPoints3DAR = np.array([[point1], [point2]])
+    else:
+        tagPoints3DAR = np.array([[point2], [point1]])
+
+    #Calculate other two points: bl, tr
+
+
+    X_LBOUND = 0
+    X_UBOUND = 0
+    Y_LBOUND = 0
+    Y_UBOUND = 0
+    Z_LBOUND = 0
+    Z_UBOUND = 0
 
     #Retrieve pixel tag points: tl, bl, tr, br
     tagPointsPixel = np.array([[],
@@ -42,14 +73,22 @@ def main(pointList):
     lboard = np.linalg.norm(tagPoints3D[3]-tagPoints3D[1]) 
 
     #Calculate H transform
-    Htrans = pts.pixelTo2DPlaneTransform(hboard, lboard, tagPointsPixel)
+    Htrans = ptf.pixelTo2DPlaneTransform(hboard, lboard, tagPointsPixel)
 
     for p in pointList:
 
-        point2D = pts.pixelTo2DPoint(p, Htrans)
+        point2D = ptf.pixelTo2DPoint(p, Htrans)
 
-        point3D = pts.PlaneTo3DPoint(point2D[0], point2D[1], ...
+        point3D = ptf.PlaneTo3DPoint(point2D[0], point2D[1], ...
             hboard, lboard, tagPoints3D)
+
+        if point3D[1] < Y_LBOUND or point3D[1] > Y_UBOUND:
+        	continue
+        if point3D[0] < X_LBOUND or point3D[0] > X_UBOUND:
+        	continue
+        if point3D[2] < Z_LBOUND or point3D[2] > Z_UBOUND:
+        	continue
+
 
         rospy.sleep(2.0)
         goal = PoseStamped()

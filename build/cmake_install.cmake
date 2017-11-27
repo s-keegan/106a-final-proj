@@ -118,6 +118,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/gtest/cmake_install.cmake")
   INCLUDE("/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/cmake_install.cmake")
+  INCLUDE("/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/planning_baxter/cmake_install.cmake")
   INCLUDE("/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)

@@ -262,6 +262,34 @@ _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_
 .PHONY : _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_train.launch/fast
 
 # Convenience name for target.
+ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/rule:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/rule
+.PHONY : ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/rule
+
+# Convenience name for target.
+_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch: ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/rule
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch/fast:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/build.make ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch/fast
+
+# Convenience name for target.
+ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/rule:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/rule
+.PHONY : ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/rule
+
+# Convenience name for target.
+_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch: ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/rule
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch/fast:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/build.make ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch/fast
+
+# Convenience name for target.
 ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-basic.test.dir/rule:
 	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-basic.test.dir/rule
 .PHONY : ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-basic.test.dir/rule
@@ -864,90 +892,6 @@ pcl_ros_gencfg/fast:
 .PHONY : pcl_ros_gencfg/fast
 
 # Convenience name for target.
-ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-ar_track_alvar/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : ar_track_alvar/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: ar_track_alvar/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/roscpp_generate_messages_py.dir/build.make ar_track_alvar/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_lisp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule:
 	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule
 .PHONY : ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule
@@ -1044,6 +988,34 @@ run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_r
 run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_train.launch/fast:
 	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_train.launch.dir/build.make ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_train.launch.dir/build
 .PHONY : run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_train.launch/fast
+
+# Convenience name for target.
+ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/rule:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/rule
+.PHONY : ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/rule
+
+# Convenience name for target.
+run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch: ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/rule
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch/fast:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/build.make ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch/fast
+
+# Convenience name for target.
+ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/rule:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/rule
+.PHONY : ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/rule
+
+# Convenience name for target.
+run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch: ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/rule
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch/fast:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/build.make ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch/fast
 
 # Convenience name for target.
 ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-basic.test.dir/rule:
@@ -2258,6 +2230,8 @@ help:
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_indiv.launch"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_indiv_no_kinect.launch"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_train.launch"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-basic.test"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-full.test"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_param_config-basic.test"
@@ -2307,12 +2281,6 @@ help:
 	@echo "... pcl_msgs_generate_messages_py"
 	@echo "... pcl_ros_gencfg"
 	@echo "... rebuild_cache"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... run_tests_ar_track_alvar"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_bundle.launch"
@@ -2320,6 +2288,8 @@ help:
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_indiv.launch"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_indiv_no_kinect.launch"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_train.launch"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-basic.test"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-full.test"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_param_config-basic.test"
