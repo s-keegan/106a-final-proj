@@ -41,14 +41,14 @@ def ros_to_np_img(ros_img_msg):
 TOT_CLICKS = 4
 
 if __name__ == '__main__':
-  
+
   # Waits for the image service to become available
   rospy.wait_for_service('last_image')
-  
+
   # Initializes the image processing node
   rospy.init_node('image_processing_node')
-  
-  # Creates a function used to call the 
+
+  # Creates a function used to call the
   # image capture service: ImageSrv is the service type
   last_image_service = rospy.ServiceProxy('last_image', ImageSrv)
 
@@ -70,7 +70,7 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
       print 'Break from raw_input'
       break
-    
+
     try:
       # Request the last image from the image service
       # And extract the ROS Image from the ImageSrv service
@@ -84,6 +84,23 @@ if __name__ == '__main__':
       # Display the CV Image
       cv2.imshow("CV Image", np_image)
 
+      hue = 70
+      hue_range = 15
+      blur = cv2.medianBlur(np_image, 9)
+      hsv = cv2.cvtColor(blur, cv2.COLOR_BGR2HSV)
+      hued = cv2.inRange(hsv, (hue-hue_range, 80, 80), (hue+hue_range, 255, 255))
+
+      cv2.imshow("hued", hued)
+      _, contours, hierarchy = cv2.findContours(hued, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+      thresh = 100
+      filtered = [cnt for cnt in contours if cv2.contourArea(cnt) > thresh]
+      cv2.drawContours(frame, filtered, -1, (0, 255, 0), 2)
+      for contour in filtered:
+          M = cv2.moments(c)
+          cX = int(M["m10"] / M["m00"])
+          cY = int(M["m01"] / M["m00"])
+          cv2.circle(np_image, (cX, cY), 1, (0, 0, 255), 2)
+      cv2.imshow("test", np_image)
       # Tell OpenCV that it should call 'on_mouse_click' when the user
       # clicks the window. This will add clicked points to our list
       cv2.setMouseCallback("CV Image", on_mouse_click, param=1)
@@ -103,7 +120,7 @@ if __name__ == '__main__':
       uv = np.array(points).T
 
 # === YOUR CODE HERE ===========================================================
-      
+
       # This is placeholder code that will draw a 4 by 3 grid in the corner of
       # the image
       nx = 4
@@ -111,7 +128,7 @@ if __name__ == '__main__':
       H = np.eye(3)
 
 # ==============================================================================
-      
+
       # Check the produced homography matrix
       check_homography(np_image, H, nx, ny)
 
@@ -121,7 +138,7 @@ if __name__ == '__main__':
         if rospy.is_shutdown():
           raise KeyboardInterrupt
         key = cv2.waitKey(100)
-      
+
       # When done, get rid of windows and start over
       # cv2.destroyAllWindows()
 
@@ -132,6 +149,5 @@ if __name__ == '__main__':
     # Catch if anything went wrong with the Image Service
     except rospy.ServiceException, e:
       print "image_process: Service call failed: %s"%e
-    
-  cv2.destroyAllWindows()
 
+  cv2.destroyAllWindows()
