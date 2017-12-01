@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "lab4_cam: 0 messages, 1 services")
+message(STATUS "lab4_cam: 0 messages, 2 services")
 
 set(MSG_I_FLAGS "-Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
@@ -15,6 +15,11 @@ add_custom_target(lab4_cam_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv" NAME_WE)
+add_custom_target(_lab4_cam_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lab4_cam" "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv" "sensor_msgs/CameraInfo:std_msgs/Header:sensor_msgs/RegionOfInterest"
+)
+
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv" NAME_WE)
 add_custom_target(_lab4_cam_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lab4_cam" "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv" "std_msgs/Header:sensor_msgs/Image"
@@ -28,6 +33,12 @@ add_custom_target(_lab4_cam_generate_messages_check_deps_${_filename}
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_cpp(lab4_cam
+  "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lab4_cam
+)
 _generate_srv_cpp(lab4_cam
   "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv"
   "${MSG_I_FLAGS}"
@@ -47,6 +58,8 @@ add_custom_target(lab4_cam_generate_messages_cpp
 add_dependencies(lab4_cam_generate_messages lab4_cam_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv" NAME_WE)
+add_dependencies(lab4_cam_generate_messages_cpp _lab4_cam_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv" NAME_WE)
 add_dependencies(lab4_cam_generate_messages_cpp _lab4_cam_generate_messages_check_deps_${_filename})
 
@@ -61,6 +74,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lab4_cam_generate_messages_cpp)
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_lisp(lab4_cam
+  "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/lab4_cam
+)
 _generate_srv_lisp(lab4_cam
   "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv"
   "${MSG_I_FLAGS}"
@@ -80,6 +99,8 @@ add_custom_target(lab4_cam_generate_messages_lisp
 add_dependencies(lab4_cam_generate_messages lab4_cam_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv" NAME_WE)
+add_dependencies(lab4_cam_generate_messages_lisp _lab4_cam_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv" NAME_WE)
 add_dependencies(lab4_cam_generate_messages_lisp _lab4_cam_generate_messages_check_deps_${_filename})
 
@@ -94,6 +115,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS lab4_cam_generate_messages_lisp)
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_py(lab4_cam
+  "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lab4_cam
+)
 _generate_srv_py(lab4_cam
   "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv"
   "${MSG_I_FLAGS}"
@@ -113,6 +140,8 @@ add_custom_target(lab4_cam_generate_messages_py
 add_dependencies(lab4_cam_generate_messages lab4_cam_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv" NAME_WE)
+add_dependencies(lab4_cam_generate_messages_py _lab4_cam_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv" NAME_WE)
 add_dependencies(lab4_cam_generate_messages_py _lab4_cam_generate_messages_check_deps_${_filename})
 

@@ -1,0 +1,6 @@
+rosrun intera_examples camera_display.py
+roslaunch ar_track_alvar sawyer_track.launch
+rosrun rviz rviz
+rosrun intera_interface enable_robot.py -e
+roslaunch sawyer_moveit_config sawyer_moveit.launch electric_gripper:=true
+roslaunch sawyer_moveit_config move_group.launch electric_gripper := true

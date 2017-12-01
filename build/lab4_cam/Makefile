@@ -150,6 +150,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CamInfoSrv.dir/rule:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CamInfoSrv.dir/rule
+.PHONY : lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CamInfoSrv.dir/rule
+
+# Convenience name for target.
+_lab4_cam_generate_messages_check_deps_CamInfoSrv: lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CamInfoSrv.dir/rule
+.PHONY : _lab4_cam_generate_messages_check_deps_CamInfoSrv
+
+# fast build rule for target.
+_lab4_cam_generate_messages_check_deps_CamInfoSrv/fast:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CamInfoSrv.dir/build.make lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CamInfoSrv.dir/build
+.PHONY : _lab4_cam_generate_messages_check_deps_CamInfoSrv/fast
+
+# Convenience name for target.
 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule:
 	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule
 .PHONY : lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule
@@ -345,54 +359,13 @@ sensor_msgs_generate_messages_py/fast:
 	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
-# Convenience name for target.
-lab4_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : lab4_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: lab4_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f lab4_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make lab4_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-lab4_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : lab4_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: lab4_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f lab4_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make lab4_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-lab4_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : lab4_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: lab4_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f lab4_cam/CMakeFiles/std_msgs_generate_messages_py.dir/build.make lab4_cam/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... _lab4_cam_generate_messages_check_deps_CamInfoSrv"
 	@echo "... _lab4_cam_generate_messages_check_deps_ImageSrv"
 	@echo "... edit_cache"
 	@echo "... geometry_msgs_generate_messages_cpp"
@@ -413,9 +386,6 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
 .PHONY : help
 
