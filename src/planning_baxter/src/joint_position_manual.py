@@ -57,6 +57,14 @@ def map_keyboard(side):
 					_done = False
 
 			return _done
+
+		def set_done_loop(angles):
+			_done = True
+			for j in range(0, 6):
+				cur_angles = limb.joint_angles()
+				if abs(cur_angles[joints[j]] - angles[joints[j]]) > 0.1:
+					_done = False
+			return _done
 			
 
 		angles = limb.joint_angles()
@@ -72,6 +80,19 @@ def map_keyboard(side):
 		angles[joints[6]] = 0
 		while not set_done(angles):
 		   limb.set_joint_positions(angles)
+
+		# start_pos = {
+		# joints[0]: 0.111921875,
+		# joints[1]: 1.24400390625,
+		# joints[2]: -2.936244140625,
+		# joints[3]: 2.8404443359375,
+		# joints[4]: 0.19019042967875,
+		# joints[5]: -2.361208007815,
+		# joints[6]: 0.1680185546875
+		# }
+
+		# while not set_done_loop(start_pos):
+		#    limb.set_joint_positions(start_pos)
 
 		done = True
 			
@@ -118,6 +139,7 @@ See help inside the example with the '?' key for key bindings.
 	rospy.loginfo("Enabling robot...")
 	rs.enable()
 	map_keyboard(args.limb)
+	map_keyboard("right")
 	print("Done.")
 
 
