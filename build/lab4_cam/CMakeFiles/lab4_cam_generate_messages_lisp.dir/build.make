@@ -47,6 +47,7 @@ include lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/progress.make
 
 lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp: /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CamInfoSrv.lisp
 lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp: /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/ImageSrv.lisp
+lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp: /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CentroidSrv.lisp
 
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CamInfoSrv.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CamInfoSrv.lisp: /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv
@@ -65,9 +66,17 @@ lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp: /home/cc/ee106a/fa17/class/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from lab4_cam/ImageSrv.srv"
 	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p lab4_cam -o /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv
 
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CentroidSrv.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CentroidSrv.lisp: /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CentroidSrv.lisp: /opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from lab4_cam/CentroidSrv.srv"
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv -Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p lab4_cam -o /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv
+
 lab4_cam_generate_messages_lisp: lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp
 lab4_cam_generate_messages_lisp: /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CamInfoSrv.lisp
 lab4_cam_generate_messages_lisp: /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/ImageSrv.lisp
+lab4_cam_generate_messages_lisp: /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CentroidSrv.lisp
 lab4_cam_generate_messages_lisp: lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/build.make
 .PHONY : lab4_cam_generate_messages_lisp
 

@@ -371,6 +371,19 @@ _lab4_cam_generate_messages_check_deps_CamInfoSrv/fast:
 .PHONY : _lab4_cam_generate_messages_check_deps_CamInfoSrv/fast
 
 #=============================================================================
+# Target rules for targets named _lab4_cam_generate_messages_check_deps_CentroidSrv
+
+# Build rule for target.
+_lab4_cam_generate_messages_check_deps_CentroidSrv: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _lab4_cam_generate_messages_check_deps_CentroidSrv
+.PHONY : _lab4_cam_generate_messages_check_deps_CentroidSrv
+
+# fast build rule for target.
+_lab4_cam_generate_messages_check_deps_CentroidSrv/fast:
+	$(MAKE) -f lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv.dir/build.make lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv.dir/build
+.PHONY : _lab4_cam_generate_messages_check_deps_CentroidSrv/fast
+
+#=============================================================================
 # Target rules for targets named _lab4_cam_generate_messages_check_deps_ImageSrv
 
 # Build rule for target.
@@ -1674,6 +1687,7 @@ help:
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... _lab4_cam_generate_messages_check_deps_CamInfoSrv"
+	@echo "... _lab4_cam_generate_messages_check_deps_CentroidSrv"
 	@echo "... _lab4_cam_generate_messages_check_deps_ImageSrv"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"

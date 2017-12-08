@@ -96,16 +96,16 @@ if __name__ == '__main__':
       listener = tf.TransformListener()
       rate = rospy.Rate(10.0)
       def change_hsv(img, is_value=True, value=100):
-      	h, s, v = cv2.split(img)
-      	lim = 255 - value
-      	if is_value:
-      		v[v > lim] = 255
-      		v[v <= lim] += value
-      	else:
-      		s[s > lim] = 255
-      		s[s <= lim] += value
-      	hsv = cv2.merge((h, s, v))
-      	return hsv 
+        h, s, v = cv2.split(img)
+        lim = 255 - value
+        if is_value:
+          v[v > lim] = 255
+          v[v <= lim] += value
+        else:
+          s[s > lim] = 255
+          s[s <= lim] += value
+        hsv = cv2.merge((h, s, v))
+        return hsv 
       
       # Display the CV Image
       headCam = ig.PinholeCameraModel()
@@ -146,13 +146,13 @@ if __name__ == '__main__':
       ar_origin = matrix2.dot(origin)
       ar_normal = matrix2.dot(z_axis)
       def LinePlaneCollision(planeNormal, planePoint, rayDirection, rayPoint, epsilon=1e-6):
-      	ndotu = planeNormal.dot(rayDirection)
-      	if abs(ndotu) < epsilon:
-      		raise RuntimeError("no intersection or line is within plane")
-      	w = rayPoint - planePoint
-      	si = -planeNormal.dot(w) / ndotu
-      	Psi = w + si * rayDirection + planePoint
-      	return Psi
+        ndotu = planeNormal.dot(rayDirection)
+        if abs(ndotu) < epsilon:
+          raise RuntimeError("no intersection or line is within plane")
+        w = rayPoint - planePoint
+        si = -planeNormal.dot(w) / ndotu
+        Psi = w + si * rayDirection + planePoint
+        return Psi
       marker_array = MarkerArray()
       i = 0
       for contour in filtered:
@@ -190,16 +190,16 @@ if __name__ == '__main__':
           planed_point2 = np.array([planed_point[0], planed_point[1], planed_point[2], 1])
           planed_point2_in_ar = matrix3.dot(planed_point2)
           if planed_point2_in_ar[0] < 0.60 and planed_point2_in_ar[0] > -0.04:
-          	if planed_point2_in_ar[1] < 0.45 and planed_point2_in_ar[1] > -0.04:
-          		planed_point2_in_ar[2] += 0.20
-          		final = matrix2.dot(planed_point2_in_ar)
-                p.x = planed_point2_in_ar[0]
-                p.y = planed_point2_in_ar[1]
-                p.z = planed_point2_in_ar[2]
-                pub2.publish(p)
-                i += 1
-                print final
-                marker_array.markers.append(test_marker)
+            if planed_point2_in_ar[1] < 0.45 and planed_point2_in_ar[1] > -0.04:
+              planed_point2_in_ar[2] += 0.20
+              final = matrix2.dot(planed_point2_in_ar)
+              p.x = planed_point2_in_ar[0]
+              p.y = planed_point2_in_ar[1]
+              p.z = planed_point2_in_ar[2]
+              pub2.publish(p)
+              i += 1
+              print final
+              marker_array.markers.append(test_marker)
       pub.publish(marker_array)
       cv2.imshow("test", np_image)
       # Tell OpenCV that it should call 'on_mouse_click' when the user

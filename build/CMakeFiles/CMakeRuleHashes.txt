@@ -1,11 +1,14 @@
 # Hashes of file build rules.
 fedecd622185c619d8aefbc148d8c552 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/include/ar_track_alvar/ParamsConfig.h
 9c786031715168a9bfc7c798b64316a4 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/include/lab4_cam/CamInfoSrv.h
+9ba2b1efa7950184c48b04f478796d89 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/include/lab4_cam/CentroidSrv.h
 b315442aa4d4607551953ab9ddcbf342 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/include/lab4_cam/ImageSrv.h
 4a01a935bcac077b3e2c6cc3c7de689c /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/lib/python2.7/dist-packages/lab4_cam/srv/_CamInfoSrv.py
+ea18d31c0881e0d8b9cb313de628cdf4 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/lib/python2.7/dist-packages/lab4_cam/srv/_CentroidSrv.py
 b4ae4068480521d15e3c66396bd40791 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/lib/python2.7/dist-packages/lab4_cam/srv/_ImageSrv.py
 1b90000198841f5b4533e6fc873c1837 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/lib/python2.7/dist-packages/lab4_cam/srv/__init__.py
 7bfca3a27d06a72c431e87350c783c15 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CamInfoSrv.lisp
+27001e6387878489ff3d14c28e6c0170 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/CentroidSrv.lisp
 ca78c7d3383a9ae04636cb2633dddd8e /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/devel/share/common-lisp/ros/lab4_cam/srv/ImageSrv.lisp
 5794b45bac738ac1b930c1638377866f CMakeFiles/clean_test_results
 a3370ac0b57a24549d69b571636f9ae7 CMakeFiles/download_extra_data
@@ -97,6 +100,7 @@ edf109c2f98168384c36af47f7259dd6 joint_ctrl/CMakeFiles/std_msgs_generate_message
 edf109c2f98168384c36af47f7259dd6 joint_ctrl/CMakeFiles/std_msgs_generate_messages_lisp
 edf109c2f98168384c36af47f7259dd6 joint_ctrl/CMakeFiles/std_msgs_generate_messages_py
 da53aaed092090858a924a087abe81c1 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CamInfoSrv
+d21538dea2a4f689620c0404de83922a lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv
 727688e8ddf8b8a3485932eeada6de8a lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv
 1cabae34912121628f47c336a472e44c lab4_cam/CMakeFiles/geometry_msgs_generate_messages_cpp
 1cabae34912121628f47c336a472e44c lab4_cam/CMakeFiles/geometry_msgs_generate_messages_lisp

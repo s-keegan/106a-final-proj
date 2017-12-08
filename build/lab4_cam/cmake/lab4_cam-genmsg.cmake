@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "lab4_cam: 0 messages, 2 services")
+message(STATUS "lab4_cam: 0 messages, 3 services")
 
 set(MSG_I_FLAGS "-Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
@@ -25,6 +25,11 @@ add_custom_target(_lab4_cam_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lab4_cam" "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv" "std_msgs/Header:sensor_msgs/Image"
 )
 
+get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv" NAME_WE)
+add_custom_target(_lab4_cam_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "lab4_cam" "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv" "geometry_msgs/Point"
+)
+
 #
 #  langs = gencpp;genlisp;genpy
 #
@@ -45,6 +50,12 @@ _generate_srv_cpp(lab4_cam
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lab4_cam
 )
+_generate_srv_cpp(lab4_cam
+  "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/lab4_cam
+)
 
 ### Generating Module File
 _generate_module_cpp(lab4_cam
@@ -61,6 +72,8 @@ add_dependencies(lab4_cam_generate_messages lab4_cam_generate_messages_cpp)
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv" NAME_WE)
 add_dependencies(lab4_cam_generate_messages_cpp _lab4_cam_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv" NAME_WE)
+add_dependencies(lab4_cam_generate_messages_cpp _lab4_cam_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv" NAME_WE)
 add_dependencies(lab4_cam_generate_messages_cpp _lab4_cam_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -86,6 +99,12 @@ _generate_srv_lisp(lab4_cam
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/lab4_cam
 )
+_generate_srv_lisp(lab4_cam
+  "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/lab4_cam
+)
 
 ### Generating Module File
 _generate_module_lisp(lab4_cam
@@ -102,6 +121,8 @@ add_dependencies(lab4_cam_generate_messages lab4_cam_generate_messages_lisp)
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv" NAME_WE)
 add_dependencies(lab4_cam_generate_messages_lisp _lab4_cam_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv" NAME_WE)
+add_dependencies(lab4_cam_generate_messages_lisp _lab4_cam_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv" NAME_WE)
 add_dependencies(lab4_cam_generate_messages_lisp _lab4_cam_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -127,6 +148,12 @@ _generate_srv_py(lab4_cam
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/indigo/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lab4_cam
 )
+_generate_srv_py(lab4_cam
+  "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/indigo/share/geometry_msgs/cmake/../msg/Point.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/lab4_cam
+)
 
 ### Generating Module File
 _generate_module_py(lab4_cam
@@ -143,6 +170,8 @@ add_dependencies(lab4_cam_generate_messages lab4_cam_generate_messages_py)
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CamInfoSrv.srv" NAME_WE)
 add_dependencies(lab4_cam_generate_messages_py _lab4_cam_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/ImageSrv.srv" NAME_WE)
+add_dependencies(lab4_cam_generate_messages_py _lab4_cam_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/src/lab4_cam/srv/CentroidSrv.srv" NAME_WE)
 add_dependencies(lab4_cam_generate_messages_py _lab4_cam_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

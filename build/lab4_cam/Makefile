@@ -164,6 +164,20 @@ _lab4_cam_generate_messages_check_deps_CamInfoSrv/fast:
 .PHONY : _lab4_cam_generate_messages_check_deps_CamInfoSrv/fast
 
 # Convenience name for target.
+lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv.dir/rule:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv.dir/rule
+.PHONY : lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv.dir/rule
+
+# Convenience name for target.
+_lab4_cam_generate_messages_check_deps_CentroidSrv: lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv.dir/rule
+.PHONY : _lab4_cam_generate_messages_check_deps_CentroidSrv
+
+# fast build rule for target.
+_lab4_cam_generate_messages_check_deps_CentroidSrv/fast:
+	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv.dir/build.make lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv.dir/build
+.PHONY : _lab4_cam_generate_messages_check_deps_CentroidSrv/fast
+
+# Convenience name for target.
 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule:
 	cd /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule
 .PHONY : lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule
@@ -366,6 +380,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... _lab4_cam_generate_messages_check_deps_CamInfoSrv"
+	@echo "... _lab4_cam_generate_messages_check_deps_CentroidSrv"
 	@echo "... _lab4_cam_generate_messages_check_deps_ImageSrv"
 	@echo "... edit_cache"
 	@echo "... geometry_msgs_generate_messages_cpp"

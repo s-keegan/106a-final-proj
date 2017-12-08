@@ -1,5 +1,6 @@
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_catkin_empty_exported_target.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CamInfoSrv.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_CentroidSrv.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check.dir

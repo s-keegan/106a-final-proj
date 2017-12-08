@@ -6,21 +6,17 @@ from moveit_msgs.msg import OrientationConstraint, Constraints, CollisionObject,
 from geometry_msgs.msg import PoseStamped, TransformStamped, Point
 import joint_position_manual as jpm
 import numpy as np
-
-def main(points3D):
-	moveit_erase(points3D)
-    # rospy.Publisher("progress", ---message_class---)
-    # rospy.publish(message_class = done)
+import time
+from lab4_cam.srv import CentroidSrv,CentroidSrvResponse
 
 
 
-def moveit_erase(points3D):
-    #LOOP THROUGH ALL POINTS IN INPUT VARIABLE
+def moveit_erase(point3D):
 
     #Initialize moveit_commander
     moveit_commander.roscpp_initialize(sys.argv)
 
-    # #Start a node
+    #Start a node
     # rospy.init_node('moveit_node')
 
     #Initialize arm
@@ -29,115 +25,121 @@ def moveit_erase(points3D):
     right_arm = moveit_commander.MoveGroupCommander('right_arm')
 
     right_arm.set_planner_id('RRTConnectkConfigDefault')
-    right_arm.set_planning_time(10)
+    right_arm.set_planning_time(30)
 
-    #set workspace to account for walls ---------------------------------------
+    #Set the velocity of the joint movement
+    right_arm.set_max_velocity_scaling_factor(0.3)
 
+    # Set workspace
+    minX = -0.1
+    minY = -0.9
+    maxX = 1.0
+    maxY = 0.6
+    right_arm.set_workspace([minX, minY, maxX, maxY])
 
-
-    # Set plane as a collision object in workspace ------------------FINISH/TEST CODE----------------
-
-    # def callback():
-        # return tag info needed to find z-axis in base frame and find full plane equation (ie normal vector and a point on the plane)
-
-    # ARtaglocations = rospy.Subscriber("topic_name", ----DataType-----, callback)
-
-    # normalToPlane = (z-axis in base frame)
-
-    # d = -(normalToPlane[0]*ARtaglocations[0][0]+normalToPlane[1]*ARtaglocations[0][1]+normalToPlane[2]*ARtaglocations[0][2])
-
-    # p = PoseStamped()
-    # scene.add_plane("board", p, normal = (normalToPlane[0], normalToPlane[1], normalToPlane[2]), offset = d)
-
-        #Set the velocity of the joint movement
-    right_arm.set_max_velocity_scaling_factor(0.22)
-
-    #Set joint targets for start position ------------TEST CODE----------if works can use for wrist twisting-----------
+    #Set joint targets for start position
     start_pos = {
-        'right_j0': 0.111921875,
-        'right_j1': 1.24400390625,
+        'right_j0': -.1015,
+        'right_j1': -1.25506,
         'right_j2': -2.936244140625,
-        'right_j3': 2.8404443359375,
-        'right_j4': 0.19019042967875,
-        'right_j5': -2.361208007815,
-        'right_j6': 0.1680185546875
+        'right_j3': -2.6185,
+        'right_j4': 0.354,
+        'right_j5': 1.2513,
+        'right_j6': -4.71146
         }
 
-    #Set start start_pos as joint target
-    right_arm.set_joint_value_target(start_pos)
+    start_pos_down = {
+        'right_j0': -.1015,
+        'right_j1': -1.25506,
+        'right_j2': -2.936244140625,
+        'right_j3': -2.6185,
+        'right_j4': 0.354,
+        'right_j5': -0.2446787,
+        'right_j6': -4.71146
+        }
 
+
+
+    #Set plane collision objects
     p = PoseStamped()
     scene.add_plane("left", p, normal = (0.0, 1.0, 0.0), offset = -0.6)    
     scene.add_plane("right", p, normal = (0.0, -1.0, 0.0), offset = -0.6)    
-    scene.add_plane("wall", p, normal = (-1.0, 0.0, 0.0), offset = -0.9)
+    scene.add_plane("wall", p, normal = (-1.0, 0.0, 0.0), offset = -0.1)
+    scene.add_plane("wallfront", p, normal = (1.0, 0.0, 0.0), offset = -1.0)
+    scene.add_plane("ceil", p, normal = (0.0, 0.0, 1.0), offset = -1.5)    
+    scene.add_plane("floor", p, normal = (0.0, 0.0, 1.0), offset = 0)
 
+
+
+    #Set start start_pos as joint target ------------------------------------------
+    right_arm.set_joint_value_target(start_pos)
 
     #Plan a path
-    right_plan0 = right_arm.plan()
+    right_planstart = right_arm.plan()
 
     #Execute the plan
     raw_input('Press <Enter> to move the right arm to start pose.')
-    right_arm.execute(right_plan0)
-
-    #May need to find transformation from current RPY to that which is parallel to z-axis of board
-    # ------------------------TEST CODE----------------------------------------
-    # current_rpy = right_arm.get_current_rpy()
-
-    # current_jointstate = right_arm.get_current_joint_values() #need to see message to implement... 
-    # # ... erasing motion with moveit
-    # print(current_jointstate)
+    right_arm.execute(right_planstart)
 
 
 
-    #Move towards board ------------------------------------------------------
-    print(points3D)
+    # rospy.wait_for_service('last_centroids')
+
+    # findNextPoint = rospy.ServiceProxy('last_centroids',CentroidSrv)
+
+    # point3D = findNextPoint().centroid
+
+    # print(point3D)
+
+    # if (point3D.x == 0.0 and point3D.y == 0.0 and point3D.z == 0.0):
+    #     print('kdjfsd')
+    #     break
+
+
+
+
+
+    # Move towards board ------------------------------------------------------
+
     goal_1 = PoseStamped()
-    goal_1.header.frame_id = "ar_marker_4"
+    goal_1.header.frame_id = "ar_fixed_frame"
 
     #x, y, and z position
-    goal_1.pose.position.y = points3D.y
-    goal_1.pose.position.x = points3D.x
-    goal_1.pose.position.z = points3D.z
-    
+    goal_1.pose.position.y = point3D.y
+    goal_1.pose.position.x = point3D.x
+    goal_1.pose.position.z = .20
     #Orientation as a quaternion
     goal_1.pose.orientation.x = 0.0
     goal_1.pose.orientation.y = -1.0
     goal_1.pose.orientation.z = 0.0
     goal_1.pose.orientation.w = 0.0
 
-
     #Set the goal state to the pose you just defined
     right_arm.set_pose_target(goal_1)
 
-    # minX = -0.9
-    # minY = -0.9
-    # maxX = 5.0
-    # maxY = 0.6
-    # right_arm.set_workspace([minX, minY, maxX, maxY])
+
 
     #Set the start state for the right arm
     right_arm.set_start_state_to_current_state()
-
-
 
 
     #Plan a path
     right_plan = right_arm.plan()
 
     #Execute the plan
-    raw_input('Press <Enter> to move the right arm to goal pose.')
+    raw_input('Press <Enter> to move the right arm to move toward board.')
     right_arm.execute(right_plan)
 
 
+    # # # Uncomment for painting ------------------------------------------------------
 
-    #Contact board ----------------------------------------------------
     # goal_2 = PoseStamped()
-    # goal_2.header.frame_id = "ar_marker_5"
+    # goal_2.header.frame_id = "ar_fixed_frame"
 
     # #x, y, and z position
-    # goal_2.pose.position.y = 0.15
-    # goal_2.pose.position.x = 0.15
-    # goal_2.pose.position.z = 0.18
+    # goal_2.pose.position.y = point3D.y+.04
+    # goal_2.pose.position.x = point3D.x
+    # goal_2.pose.position.z = .31
     
     # #Orientation as a quaternion
     # goal_2.pose.orientation.x = 0.0
@@ -145,48 +147,76 @@ def moveit_erase(points3D):
     # goal_2.pose.orientation.z = 0.0
     # goal_2.pose.orientation.w = 0.0
 
+    # orien_const = OrientationConstraint()
+    # orien_const.link_name = "right_gripper";
+    # orien_const.header.frame_id = "ar_fixed_frame";
+    # orien_const.orientation.y = -1.0;
+    # orien_const.absolute_x_axis_tolerance = 0.1;
+    # orien_const.absolute_y_axis_tolerance = 0.1;
+    # orien_const.absolute_z_axis_tolerance = 0.1;
+    # orien_const.weight = 1.0;
+    # consts = Constraints()
+    # consts.orientation_constraints = [orien_const]
+    # right_arm.set_path_constraints(consts)
+
+
     # #Set the goal state to the pose you just defined
     # right_arm.set_pose_target(goal_2)
 
+
     # #Set the start state for the right arm
     # right_arm.set_start_state_to_current_state()
+
 
     # #Plan a path
     # right_plan2 = right_arm.plan()
 
     # #Execute the plan
-    # raw_input('Press <Enter> to move the right arm to goal pose.')
+    # # raw_input('Press <Enter> to move the right arm to contact.')
     # right_arm.execute(right_plan2)
 
+    # # # # # time.sleep(0.1)
 
 
-    #Erase board -------------------------TEST CODE-----------------------------
-    # current_jointstate = right_arm.get_current_joint_values() #need to see message to implement... 
-    # # ... erasing motion with moveit
 
-    # pos = {
-    # 'right_j0': current_jointstate[0],
-    # 'right_j1': current_jointstate[1],
-    # 'right_j2': current_jointstate[2],
-    # 'right_j3': current_jointstate[3],
-    # 'right_j4': current_jointstate[4],
-    # 'right_j5': current_jointstate[5],
-    # 'right_j6': 3.14
-    # }
+    # Make contact ----------------------------------------------
+
+    right_arm.set_max_velocity_scaling_factor(0.22)
+
+    goal_3 = PoseStamped()
+    goal_3.header.frame_id = "ar_fixed_frame"
+
+    #x, y, and z position
+    goal_3.pose.position.y = point3D.y
+    goal_3.pose.position.x = point3D.x
+    goal_3.pose.position.z = .15
     
-
-    # #Set start start_pos as joint target
-    # right_arm.set_joint_value_target(pos)
-
-    # #Plan a path
-    # right_plan3 = right_arm.plan()
-
-    # #Execute the plan
-    # raw_input('Press <Enter> to move the right arm to start pose.')
-    # right_arm.execute(right_plan3)
+    #Orientation as a quaternion
+    goal_3.pose.orientation.x = 0.0
+    goal_3.pose.orientation.y = -1.0
+    goal_3.pose.orientation.z = 0.0
+    goal_3.pose.orientation.w = 0.0
 
 
-    # RUN SEPARATELY TO SEE IF COMMENTED OUT CODE IS NECESSARY ----------TEST CODE----------------
+
+    #Set the goal state to the pose you just defined
+    right_arm.set_pose_target(goal_3)
+
+
+    #Set the start state for the right arm
+    right_arm.set_start_state_to_current_state()
+
+
+    #Plan a path
+    right_plan3 = right_arm.plan()
+
+    #Execute the plan
+    raw_input('Press <Enter> to move the right arm to contact.')
+    right_arm.execute(right_plan3)
+
+
+
+    # Rotate wrist -------------------------------------------
     raw_input('Press <Enter> to erase point.')
     jpm.main()
 
@@ -195,8 +225,10 @@ def moveit_erase(points3D):
 
 if __name__ == '__main__':
 
+ 
+
     #Start a node
     rospy.init_node('moveit_node')
-    rospy.Subscriber("/centroids", Point, main)
+    rospy.Subscriber("/centroids", Point, moveit_erase)
     rospy.spin()
 
