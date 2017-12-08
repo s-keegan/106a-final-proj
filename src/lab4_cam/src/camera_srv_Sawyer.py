@@ -35,7 +35,7 @@ class ImgService:
     rospy.init_node('cam_listener')
 
     #Subscribe to the image topic
-    rospy.Subscriber("/io/internal_camera/head_camera/image_raw", Image, self.imgReceived)
+    rospy.Subscriber("/io/internal_camera/head_camera/image_rect_color", Image, self.imgReceived)
     rospy.Subscriber("/io/internal_camera/head_camera/camera_info", CameraInfo, self.camInfoReceived)
     #Create the service
     rospy.Service('last_image', ImageSrv, self.getLastImage)

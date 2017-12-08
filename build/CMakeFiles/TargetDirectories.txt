@@ -10,7 +10,6 @@
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_train.launch.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-basic.test.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-full.test.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_param_config-basic.test.dir
@@ -69,12 +68,12 @@
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_lisp.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_py.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/pcl_ros_gencfg.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/joint_ctrl/CMakeFiles/roscpp_generate_messages_cpp.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/joint_ctrl/CMakeFiles/roscpp_generate_messages_lisp.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/joint_ctrl/CMakeFiles/roscpp_generate_messages_py.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/joint_ctrl/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/joint_ctrl/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/joint_ctrl/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/planning_baxter/CMakeFiles/roscpp_generate_messages_cpp.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/planning_baxter/CMakeFiles/roscpp_generate_messages_lisp.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/planning_baxter/CMakeFiles/roscpp_generate_messages_py.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/planning_baxter/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/planning_baxter/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/planning_baxter/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/CMakeFiles/run_tests.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check.dir
@@ -84,7 +83,6 @@
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_pr2_train.launch.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_sawyer_track.launch.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_launch_webcam_track.launch.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-basic.test.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_arg_config-full.test.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__home_cc_ee106a_fa17_class_ee106a-abi_ros_workspaces_Fall-17-106A-Project_src_ar_track_alvar_test_marker_param_config-basic.test.dir
@@ -97,9 +95,9 @@
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/joint_ctrl/CMakeFiles/std_msgs_generate_messages_cpp.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/joint_ctrl/CMakeFiles/std_msgs_generate_messages_lisp.dir
-/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/joint_ctrl/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir
+/home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/lab4_cam/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/CMakeFiles/tests.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir
 /home/cc/ee106a/fa17/class/ee106a-abi/ros_workspaces/Fall-17-106A-Project/build/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_lisp.dir

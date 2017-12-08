@@ -1,0 +1,21 @@
+<launch>
+
+    <include file="$(find ar_track_alvar)/launch/sawyer_track.launch"/>
+
+    <node name="cam_listener" pkg="lab4_cam" type="camera_srv_Sawyer.py"
+    respawn="false" output="screen" args="" />
+
+    <node name="image_service_node" pkg="lab4_cam" type="image_process_srv.py"
+    respawn="false" output="screen" args="" />
+
+<!--     <node name="enable" pkg="intera_interface" type="enable_robot.py"
+    respawn="false" output="screen" args="-e" />
+
+    <node name="jtas" pkg="intera_interface" type="joint_trajectory_action_server.py"
+    respawn="false" output="screen" args="" /> -->
+
+    <node name="moveit_node" pkg="planning_baxter" type="path_test_client.py"
+    respawn="false" output="screen" args="" />
+
+</launch>
+

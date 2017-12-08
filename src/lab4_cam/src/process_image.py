@@ -46,15 +46,15 @@ def LinePlaneCollision(planeNormal, planePoint, rayDirection, rayPoint, epsilon=
   Psi = w + si * rayDirection + planePoint
   return Psi
 
-def get_transform(frame1, frame2):
+def get_transform(target, source):
 	rate = rospy.Rate(10.0)
-	listener.waitForTransform(frame1, frame2, rospy.Time(0), rospy.Duration(4.0))
-	if listener.canTransform(frame1, frame2, rospy.Time(0)):
-		translation, rotation = listener.lookupTransform(frame1, frame2, rospy.Time(0))
+	listener.waitForTransform(target, source, rospy.Time(0), rospy.Duration(4.0))
+	if listener.canTransform(target, source, rospy.Time(0)):
+		translation, rotation = listener.lookupTransform(target, source, rospy.Time(0))
 		matrix = listener.fromTranslationRotation(translation, rotation)
 		return matrix
 	else:
-		print("No transform found between " + frame1 + " and " + frame2 + ".")
+		print("No transform found between " + target + " and " + source + ".")
 		return
 
 if __name__ == '__main__':
@@ -71,30 +71,30 @@ if __name__ == '__main__':
 	listener = tf.TransformListener()
 	br = tf.TransformBroadcaster()
 	rate = rospy.Rate(10.0)
-	b_ar_tf, b_ar_rot = None, None
+	ar_b_tf, ar_b_rot = None, None
 	
 	# Creates a function used to call the image capture service: ImageSrv is the service type
 	last_image_service = rospy.ServiceProxy('last_image', ImageSrv)
 	last_cam_info_srv = rospy.ServiceProxy('last_cam_info', CamInfoSrv)
-	while b_ar_tf == None and b_ar_rot == None:
+	while ar_b_tf == None and ar_b_rot == None and not rospy.is_shutdown():
 		
-		# b_ar_trans, b_ar_rot = listener.lookupTransform('base', 'ar_marker_4', rospy.Time(0))
+		# ar_b_trans, ar_b_rot = listener.lookupTransform('base', 'ar_marker_4', rospy.Time(0))
 		# if listener.canTransform('base', 'ar_marker_4', rospy.Time.now()):
 		#     print("found fixed")
-		#     print(b_ar_trans)
-		#     print(b_ar_rot)
+		#     print(ar_b_trans)
+		#     print(ar_b_rot)
 		try:
 			listener.waitForTransform('base', 'ar_marker_4', rospy.Time(0), rospy.Duration(4.0))
 			listener.waitForTransform('base', 'ar_marker_4', rospy.Time(), rospy.Duration(4.0))
-			b_ar_tf, b_ar_rot = listener.lookupTransform('base', 'ar_marker_4', rospy.Time(0))
-			# br.sendTransform(b_ar_trans, b_ar_rot, rospy.Time(0), "base", "ar_fixed_frame")
+			ar_b_tf, ar_b_rot = listener.lookupTransform('base', 'ar_marker_4', rospy.Time(0))
+			# br.sendTransform(ar_b_trans, ar_b_rot, rospy.Time(0), "base", "ar_fixed_frame")
 		except tf2_ros.TransformException:
 				print("Failed to find transform to AR marker.")
 				pass
 
 	while not rospy.is_shutdown():
 		try:
-			br.sendTransform(b_ar_tf, b_ar_rot, rospy.Time.now(), "ar_fixed_frame", "base")
+			br.sendTransform(ar_b_tf, ar_b_rot, rospy.Time.now(), "ar_fixed_frame", "base")
 			# Request the last image from the image service
 			# And extract the ROS Image from the ImageSrv service
 			# Remember that ImageSrv.image_data was
@@ -108,7 +108,7 @@ if __name__ == '__main__':
 			headCam = ig.PinholeCameraModel()
 			headCam.fromCameraInfo(ros_cam_info)
 			hue = 70 #70 for green
-			hue_range = 20
+			hue_range = 25 #changed from 20
 			blur = cv2.medianBlur(np_image, 9)
 			hsv = cv2.cvtColor(blur, cv2.COLOR_BGR2HSV)
 			hsv = change_hsv(hsv, is_value=True)
@@ -139,15 +139,15 @@ if __name__ == '__main__':
 			# translation3, rotation3 = listener.lookupTransform("ar_marker_4", "base", rospy.Time(0))
 			# matrix3 = listener.fromTranslationRotation(translation3, rotation3)
 
-			matrix_b_hc = get_transform("base", "head_camera")
-			matrix_b_ar = get_transform("base", "ar_fixed_frame")
-			matrix_ar_b = get_transform("ar_fixed_frame", "base")
+			matrix_hc_b = get_transform("base", "head_camera")
+			matrix_ar_b = get_transform("base", "ar_fixed_frame")
+			matrix_b_ar = get_transform("ar_fixed_frame", "base")
 
 			origin = np.array([0, 0, 0, 1])
 			z_axis = np.array([0, 0, 1, 1])
-			head_origin = matrix_b_hc.dot(origin)
-			ar_origin = matrix_b_ar.dot(origin)
-			ar_normal = matrix_b_ar.dot(z_axis)
+			head_origin = matrix_hc_b.dot(origin)
+			ar_origin = matrix_ar_b.dot(origin)
+			ar_normal = matrix_ar_b.dot(z_axis)
 		  
 			marker_array = MarkerArray()
 			i = 0
@@ -158,7 +158,7 @@ if __name__ == '__main__':
 				cv2.circle(np_image, (cX, cY), 1, (0, 0, 255), 2)
 				ray = headCam.projectPixelTo3dRay(headCam.rectifyPoint((cX, cY)))
 				# print headCam.rectifyPoint((cX, cY))
-				point_in_base = matrix_b_hc.dot(np.array([ray[0], ray[1], ray[2], 1]))
+				point_in_base = matrix_hc_b.dot(np.array([ray[0], ray[1], ray[2], 1]))
 
 				p = Point()
 
@@ -187,7 +187,7 @@ if __name__ == '__main__':
 				planed_point2_in_ar = matrix_b_ar.dot(planed_point2)
 				if planed_point2_in_ar[0] < 0.60 and planed_point2_in_ar[0] > -0.04:
 					if planed_point2_in_ar[1] < 0.45 and planed_point2_in_ar[1] > -0.04:
-						planed_point2_in_ar[2] += 0.20
+						planed_point2_in_ar[2] += 0.00 #removed 0.20 offset
 						# final = matrix2.dot(planed_point2_in_ar)
 						p.x = planed_point2_in_ar[0]
 						p.y = planed_point2_in_ar[1]

@@ -25,8 +25,6 @@ class CentroidService:
 		self.marker_publisher = rospy.Publisher('cam_marker', MarkerArray, queue_size=10)
 		self.centroid_publisher = rospy.Publisher('centroids2', Point, queue_size=10)
 
-
-
 		self.last_image_service = rospy.ServiceProxy('last_image', ImageSrv)
 		self.last_cam_info_srv = rospy.ServiceProxy('last_cam_info', CamInfoSrv)
 
