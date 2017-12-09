@@ -3,7 +3,7 @@ UC Berkeley EE 106A - Fall 2017 - Team 37
 
 This project is a ROS framework for manipulating points on a flat surface.
 
-It currently erases or paints over OpenCV detected shapes of a specified color or a whiteboard or other surface.
+It currently erases or paints over OpenCV detected shapes of a specified color on a whiteboard or other surface.
 
 More information can be found at our project website:
 https://tomsawyerbot.weebly.com/
